@@ -253,9 +253,10 @@ Create a function called `removeArtist` that takes two arguments:
  * For example, if removeArtist is invoked with the data and the number 0,
  * it will remove Amedeo Modigliani from our dataset and log the number 19.  
 */
-function removeArtist(/*Your Code Here*/) {
-   /*Your Code Here*/
-}
+function removeArtist(array, index) {
+   array.splice(index,1);
+   return array.length
+} console.log(removeArtist(artists, 2))
    
 
 /**
@@ -273,9 +274,11 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
+function addArtist(array, id, name, years, genre, nationality, bio){
+    array.push({id, name, years, genre, nationality, bio});
+    return array
+  } 
+  console.log(addArtist(artists, 20, "Stephanie Enciso", "1996-2020", "Web Design", "Hispanic", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."))
 
   
 
@@ -288,8 +291,12 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/){
-  /*Your Code Here*/
+function lotsOfArt(array){
+  let newArray = [];
+  for (let i = 0; i < array.length; i++){
+    if (array[i].includes(100));
+    return newArray.push(array[i].name);
+  }
 }
 
 
