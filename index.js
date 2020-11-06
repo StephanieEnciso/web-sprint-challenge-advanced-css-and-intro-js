@@ -238,9 +238,18 @@ it returns an array with names of artists who were born in and died in 20th cent
 example born in 1901 and died in 1959 - included / born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(/*Your Code Here*/){
-  /*Your Code Here*/
-}
+function get20s(arr){
+  let newArr = [];
+  for(let i = 0; i < arr.length; i++){
+
+    if(arr.includes("1900-2000")) {
+      newArr.push(arr[i]);
+    }
+  }
+  return newArr
+} 
+console.log(get20s(artists));
+
 
 
 
@@ -291,13 +300,18 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(array){
+function lotsOfArt(art){
   let newArray = [];
-  for (let i = 0; i < array.length; i++){
-    if (array[i].includes(100));
-    return newArray.push(array[i].name);
+  
+  for (let i = 0; i < art.length; i++){
+    
+    if (art.includes(100)) {
+      newArray.push(art[i]);
+    }
+
   }
-}
+  return newArray
+} console.log(lotsOfArt(artists))
 
 
 
