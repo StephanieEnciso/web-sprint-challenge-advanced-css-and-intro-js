@@ -210,7 +210,7 @@ Practice accessing data above by console.log-ing following items:
 (2) Bio of the third artist (2nd index) in the array */
 
 console.log(artists[0].name);
-console.log(artists[2].bio)
+console.log(artists[2].bio);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
@@ -242,8 +242,8 @@ function get20s(arr){
   let newArr = [];
   for(let i = 0; i < arr.length; i++){
 
-    if(arr.includes("1900-2000")) {
-      newArr.push(arr[i]);
+    if(arr[i]["years"] > "1900" && arr[i]["years"] < "2000") {
+      newArr.push(arr[i]["name"]);
     }
   }
   return newArr
@@ -305,8 +305,9 @@ function lotsOfArt(art){
   
   for (let i = 0; i < art.length; i++){
     
-    if (art.includes(100)) {
-      newArray.push(art[i]);
+    if (art[i]["paintings"] >= 100) {
+      newArray.push(art[i]["name"]);
+
     }
 
   }
